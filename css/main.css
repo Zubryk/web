@@ -1,0 +1,16 @@
+body{
+    background: #444;
+    color: white;
+    align-items: center;
+}
+
+.contact-icons i{
+    color: white;
+    padding: 0.15cm;
+}
+
+.contact-icons i:hover{
+    color: black;
+    padding: 15px;
+    box-sizing: padding-box;
+}
