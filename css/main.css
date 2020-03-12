@@ -24,12 +24,93 @@ body::-webkit-scrollbar {
     width: 100%;
     height: 60px;
     background-color: rgb(112, 112, 112);
+    justify-content: center;
+    align-items: center;
+}
+
+.dot {
+    display: block;
+    width: 50px;
+    height: 50px;
+    /*background-color: #fff;*/
+    border-radius: 50%;
+    position: relative;
+}
+
+.dot span,
+.dot span::before,
+.dot span::after {
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    left: 50%;
+    margin-left: -10px;
+    width: 20px;
+    height: 2px;
+    background-color: #222;
+}
+
+.dot span::before,
+.dot span::after {
+    content: '';
+    display: block;
+    transition: 0.2s;
+}
+
+.dot span::before {
+    transform: translateY(-5px);
+}
+
+.dot span::after {
+    transform: translateY(5px);
+}
+
+.menu-btn_active span {
+    transform: rotate(-90deg);
+}
+
+.menu-btn_active span:before {
+    transform: rotate(-35deg);
+    width: 10px;
+    transform-origin: left bottom;
+}
+
+.menu-btn_active span:after {
+    transform: rotate(35deg);
+    width: 10px;
+    transform-origin: left top;
+}
+
+.menu {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 62px;
+    padding-top: 2px;
+    position: fixed;
+    /*width: 150px;*/
+    width: 100%;
+    border: 3px solid white;
+    visibility: hidden;
+    transition: 0.2s 0.1s;
+    /*transform: translateX(-450px);*/
+}
+
+.menu-nav li {
+    /* display: inline;*/
 }
 
 .menu li {
     display: inline-block;
-    text-align: center;
+    list-style-type: none;
     padding: 10px;
+}
+
+.menu ul {
+    padding-left: 0px;
 }
 
 .menu li a {
@@ -38,9 +119,12 @@ body::-webkit-scrollbar {
 }
 
 .menu li a:hover {
-    text-decoration: underline;
+    /*text-decoration: underline;*/
+    background-color: white;
+    border-radius: 10%;
     font-size: 20px;
     color: black;
+    transition: 0.2s;
 }
 
 section {
@@ -94,4 +178,5 @@ section {
     color: black;
     padding: 15px;
     box-sizing: padding-box;
+    transition: 0.2s;
 }
