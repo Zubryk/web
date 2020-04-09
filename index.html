@@ -30,7 +30,7 @@
     <div id="container">
         <section class="section" id="home">
             <div class="me">
-                <img src="img/myphoto1.jpg" alt="my photo">
+                <img id="myphoto" src="img/myphoto.jpg" alt="my photo">
                 <h1>Roman Zubrytskyi</h1>
                 <h3>Computer Science Student</h2>
             </div>
@@ -56,22 +56,22 @@
             <h1>My Projects</h1>
         </section>
         <section class="section" id="contact">
-            <form class="contact-form" action="index.html" method="post">
+            <form id="contact-form-id" class="contact-form" method="GET">
 
                 <div id="Name">
-                    <p>Name<input type="text" class="contact-form-text"></p>
+                    <p>Name<input id="name" type="text" class="contact-form-text"></p>
                 </div>
-                <!--<p>Surname<input type="text"></p>-->
 
                 <div id="Email">
-                    <p>Email<input type="email" class="contact-form-text"></p>
+                    <p>Email<input id="email" type="email" class="contact-form-text"></p>
                 </div>
-                <p>Subject<input type="text" class="contact-form-text"></p>
-                <p>Message<textarea class="contact-form-text"></textarea></p>
+                <p>Subject<input id="subject" type="text" class="contact-form-text"></p>
+                <p>Message<textarea id="message" class="contact-form-text"></textarea></p>
                 <input type="submit" class="contact-form-btn" value="Send">
             </form>
             <div class="second">
                 <table class="call">
+                    <caption>When i can get calls</caption>
                     <thead>
                         <tr>
                             <th></th>
@@ -83,21 +83,21 @@
                     <tbody>
                         <tr>
                             <td>9:00-12:00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>+</td>
                         </tr>
                         <tr>
                             <td>12:00-16:00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>-</td>
+                            <td>+</td>
+                            <td>-</td>
                         </tr>
                         <tr>
                             <td>16:00-19:00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>+</td>
+                            <td>-</td>
+                            <td>-</td>
                         </tr>
                     </tbody>
                     <thead>
@@ -111,27 +111,28 @@
                     <tbody>
                         <tr>
                             <td>9:00-12:00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>+</td>
+                            <td>-</td>
+                            <td>-</td>
                         </tr>
                         <tr>
                             <td>12:00-16:00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>-</td>
+                            <td>+</td>
+                            <td>-</td>
                         </tr>
                         <tr>
                             <td>16:00-19:00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>+</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             <div class="third">
                 <table class="call">
+                    <caption>When i can get calls</caption>
                     <thead>
                         <tr>
                             <th></th>
@@ -146,30 +147,30 @@
                     <tbody>
                         <tr>
                             <td>9:00-12:00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>+</td>
+                            <td>+</td>
+                            <td>-</td>
+                            <td>-</td>
                         </tr>
                         <tr>
                             <td>12:00-16:00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>-</td>
+                            <td>+</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>+</td>
+                            <td>-</td>
                         </tr>
                         <tr>
                             <td>16:00-19:00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>+</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>+</td>
                         </tr>
                     </tbody>
                 </table>
@@ -178,6 +179,8 @@
     </div>
     <script src="js/fullpage.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/events.js"></script>
 </body>
 
 </html>
