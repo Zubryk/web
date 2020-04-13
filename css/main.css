@@ -13,6 +13,11 @@ body {
     font-family: myFirstFont;
 }
 
+body[data-theme='light'] {
+    background: rgb(224, 223, 223);
+    color: black;
+}
+
 body::-webkit-scrollbar {
     display: none;
 }
@@ -109,6 +114,10 @@ body::-webkit-scrollbar {
     transition: 0.2s 0.1s;
 }
 
+.menu[data-theme='light'] {
+    border: 3px solid rgb(112, 112, 112);
+}
+
 @media (max-width: 550px) {
     .myheader {
         height: 50px;
@@ -137,6 +146,11 @@ body::-webkit-scrollbar {
     color: white;
 }
 
+.menu li a[data-theme='light'] {
+    text-decoration: none;
+    color: black;
+}
+
 .menu li a:hover {
     background-color: white;
     border-radius: 10%;
@@ -144,6 +158,56 @@ body::-webkit-scrollbar {
     color: black;
     transition: 0.2s;
 }
+
+
+/*button*/
+
+.toggle-container {
+    position: absolute;
+    float: right;
+    right: 90px;
+}
+
+input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 52px;
+    height: 27px;
+    background: white;
+    float: right;
+    border-radius: 100px;
+    position: relative;
+}
+
+label:after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background: gray;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+input:checked+label:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+
+label:active:after {
+    width: 45px;
+}
+
+
+/*button end*/
 
 section {
     width: 100%;
@@ -155,6 +219,10 @@ section {
     border: 3px solid white;
     border-radius: 100%;
     margin: 5px;
+}
+
+.me img[data-theme='light'] {
+    border: 3px solid rgb(112, 112, 112);
 }
 
 @media (max-width: 410px) {
@@ -188,11 +256,19 @@ section {
     padding: 0.15cm;
 }
 
+.contact-icons i[data-theme='light'] {
+    color: black;
+}
+
 .contact-icons i:hover {
     color: black;
     padding: 15px;
     box-sizing: padding-box;
     transition: 0.2s;
+}
+
+.contact-icons i[data-theme='light']:hover {
+    color: rgb(112, 112, 112);
 }
 
 
@@ -222,6 +298,12 @@ section {
     transition: 0.5s;
 }
 
+.contact-form-text[data-theme='light'] {
+    border: 2px solid rgb(92, 92, 92);
+    background: rgb(224, 223, 223);
+    color: black;
+}
+
 .contact-form textarea {
     resize: none;
     height: 120px;
@@ -240,9 +322,19 @@ section {
     transition: 0.5s;
 }
 
+.contact-form-btn[data-theme='light'] {
+    background: black;
+    color: white;
+}
+
 .contact-form-btn:hover {
     background: black;
     color: white;
+}
+
+.contact-form-btn[data-theme='light']:hover {
+    background: rgb(112, 112, 112);
+    color: black;
 }
 
 .second {
@@ -255,6 +347,10 @@ section {
 .second caption {
     padding: 5px;
     border-bottom: 1px solid #e8e9eb;
+}
+
+.call caption[data-theme='light'] {
+    border-bottom: 1px solid black;
 }
 
 .second td {
@@ -294,6 +390,10 @@ table.call thead {
 
 table.call td {
     border-bottom: 1px solid #e8e9eb;
+}
+
+table.call td[data-theme='light'] {
+    border-bottom: 1px solid black;
 }
 
 @media (max-width:500px) {

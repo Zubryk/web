@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/fullpage.min.css">
 </head>
 
-<body>
+<body id="body">
     <div class="myheader">
         <img id="logo" src="img/Logo.png">
         <div class="menu-button">
@@ -25,7 +25,9 @@
                 <li><a href="#contact">Contact Me</a></li>
             </ul>
         </nav>
-
+        <div class="toggle-container">
+            <input type="checkbox" id="switch" name="theme" /><label for="switch">Toggle</label>
+        </div>
     </div>
     <div id="container">
         <section class="section" id="home">
@@ -181,6 +183,7 @@
     <script src="js/main.js"></script>
     <script src="js/validation.js"></script>
     <script src="js/events.js"></script>
+    <script src="js/theme.js"></script>
 </body>
 
 </html>
