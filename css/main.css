@@ -165,7 +165,7 @@ body::-webkit-scrollbar {
 .toggle-container {
     position: absolute;
     float: right;
-    right: 90px;
+    right: 20px;
 }
 
 input[type=checkbox] {
